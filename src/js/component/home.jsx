@@ -18,7 +18,7 @@ const Home = () => {
 
 	const getList = async () => {
 		const response = await fetch(
-			"https://assets.breatheco.de/apis/fake/todos/user/aemem"
+			"https://assets.breatheco.de/apis/fake/todos/user"
 		);
 		const data = await response.json();
 		setList(data);
@@ -26,7 +26,7 @@ const Home = () => {
 	};
 
 	const updateList = async () => {
-		await fetch("https://assets.breatheco.de/apis/fake/todos/user/aemem", {
+		await fetch("https://assets.breatheco.de/apis/fake/todos/user", {
 			method: "PUT",
 			headers: {
 				"Content-Type": "application/json",
